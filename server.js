@@ -22,6 +22,7 @@ const app = require("./app");
 
 //Local MonogoDB
 const DB = process.env.DATABASE_LOCAL;
+// console.log("db------------------...........>>>>>>>>>>>",DB);
 
 mongoose.connect(DB).then(() => console.log("DB connection successful!"));
 
@@ -43,7 +44,8 @@ mongoose.connect(DB).then(() => console.log("DB connection successful!"));
 //   next();
 // });
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 8081;
+// console.log("port-------------->>>>>>>>>",port)
 const server = app.listen(port, () => {
   console.log(`App running on port ${port}...`);
 });
